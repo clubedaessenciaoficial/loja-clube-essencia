@@ -1,0 +1,54 @@
+.vitrine-ofertas {order:10}
+:root {--csOfsT:#ffffff;--csOfs:#000000;--cOfsP2T:#ffffff;--cOfsP2:#9d7f52;--cOfsPT:#ffffff;--cOfsP:#caaa7b;--cOfsVT:#1c1c1c;--cOfsV:#ffffff;--cOfsMS:#9d7f52;--cOfsMT:#ffffff;--cOfsM:#caaa7b;--csCorPrincipal:#1c1c1c;--csBotoes:#db4e5f;--csSuporte:#27bf64;--csSuporteIcone:#ffffff;--csInfoDestaque:#f1f1f1;--csInfoDestaqueTxt:#565656;--csCab:#ffffff;--csCabTxt:#1c1c1c;--csBusca:#f6f6f6;--csBuscaTxt:#808080;--csCarrinhoqtd:#db4e5f;--csCarrinhoqtdn:#ffffff;--csMenu:#1c1c1c;--csMenuTxt:#ffffff;--csTodasCategorias:#ffffff;--csBandeiraDesconto:#ee8403;--csBp1:#ee8403;--csBp2:#4a93d4;--csBp3:#6aa84f;--cFundo:#fbfbfb;--cBotoes:#daa520;--cBotoesTxt:#ffffff;--cTitulos:#1c1c1c;--cAlerta:#daa520;--cdP:#daa520;--cSuporte:#daa520;--cSuporteIcone:#ffffff;--cBarra:#ffffff;--cBarraTxt:#606060;--cInfoDestaque:#e9e9e9;--cInfoDestaqueIcone:#9d7f52;--cInfoDestaqueTxt:#1c1c1c;--cCab:#9d7f52;--cCabIcones:#ffffff;--cCabTxt:#ffffff;--cBusca:#e9e9e9;--cBuscaTxt:#808080;--cCarrinhoqtd:#daa520;--cCarrinhoqtdn:#ffffff;--cMenu:#caaa7b;--cMenuTxt:#ffffff;--cTodasCategoriasIcone:#ffffff;--cTodasCategoriasTxt:#ffffff;--cBannerF:#313131;--cBannerN:#ffffff;--cBannerP:#d6d6d6;--cBannerB:#daa520;--cBannerBTxt:#ffffff;--cTarja:#ffffff;--cTarjaIcone:#1c1c1c;--cTarjaTxt:#daa520;--cTarjaSub:#1c1c1c;--cPreco:#daa520;--cPix:#f7f7f7;--cPixIcone:#daa520;--cPixTxt:#1c1c1c;--cBotaoWP:#ffffff;--cBotaoWPTxt:#1c1c1c;--cBotaoWPBorda:#daa520;--cBandeiraDesconto:#1c1c1c;--cBandeiraDescontoTxt:#ffffff;--cBandeiraFrete:#199a64;--cBandeiraFreteTxt:#ffffff;--cBp1:#6a329f;--cBp1Txt:#ffffff;--cBp2:#c12c2c;--cBp2Txt:#ffffff;--cBp3:#653239;--cBp3Txt:#ffffff;--cVMarcas:#f3f3f3;--cVMarcasTxt:#1c1c1c;--cVVideo:#f3f3f3;--cVVideoTxt:#1c1c1c;--cVBlog:#f3f3f3;--cVBlogTxt:#1c1c1c;--cVBlogD:#daa520;--cVDepoimentos:#f3f3f3;--cVDepoimentosTxt:#1c1c1c;--cNewsletter:#8b6f45;--cNewsletterTxt:#ffffff;--cNewsletterCaixa:#e9e9e9;--cNewsletterCaixaTxt:#808080;--cRodape:#9d7f52;--cRodapeTxt:#ffffff;--cRodapeRedes:#daa520;--cRodapeRedesTxt:#ffffff;--cRodapeInferior:#ffffff;--cRodapeInferiorTxt:#1c1c1c;--cLancamento:#daa520;--cDesc:#f7f7f7;--cDescTxt:#1c1c1c;}
+.vitrine-produtos {order:1}
+.vitrine-destaque {order:6}
+.vitrine-mas-vendido {order:2}
+.vitrine-lancamento {order:5}
+.vitrine-instagram {order:8}
+.vitrine-marcas {order:3}
+.vitrine-video {order:4}
+.vitrine-depoimentos {order:9}
+.vitrine-blog {order:7}
+.produto-descricao {order:1}
+.produto-comentarios {order:3}
+.produto-aproveite {order:4}
+.produto-comprejunto {order:2}
+.pagina-categoria .banner.vitrine {order:2}
+.pagina-categoria #listagemProdutos {order:4}
+.categoria-descricao {order:1}
+.categoria-newsletter {order:3}
+body, input, select, .titulo, button, textarea, .pagina-pagina .caixa-sombreada p {font-family:Lato}
+
+/* Botão PIX 10% OFF */
+.pagina-produto .comprar{flex-wrap:wrap}
+.pagina-produto .comprar .botao-pix{flex:0 0 100%;order:9;width:100%;margin:10px 0 0;padding:12px 6px!important;font-size:15px}
+.botao-pix small{display:block;margin-top:3px;color:#fff!important;font-size:11px}
+.listagem-item a.botao-pix{position:relative;z-index:9;margin:10px 0 2px!important;padding:9px 3px!important;font-size:12px!important;line-height:1.2}
+.pagina-carrinho .av-pix{padding:15px 8px!important;margin:10px 0!important;border-radius:8px;font-size:17px!important;box-shadow:0 4px 0 #087338}
+.pagina-carrinho .av-pix small{font-size:12px}
+
+/* Cards de produto */
+.listagem-item .imagem-produto{height:260px!important;display:flex;align-items:center;overflow:hidden}
+.listagem-item .imagem-produto img{width:100%!important;height:100%!important;object-fit:contain!important}
+.listagem-item .info-produto{display:flex;flex-direction:column;min-height:205px}
+.listagem-item .nome-produto{min-height:42px}
+.listagem-item .precos-wrap{margin-top:auto}
+.listagem-item:hover .acoes-produto{position:relative;z-index:20}
+
+/* Carrossel de marcas */
+.marcas .slick-slide a{height:170px!important;padding:2px;box-sizing:border-box;display:grid!important;place-items:center}
+.marcas .slick-slide img{width:auto!important;height:auto!important;max-width:100%!important;max-height:150px!important;object-fit:contain}
+
+/* Depoimentos */
+.depoimento{margin:0 4px!important}
+.vitrine-depoimentos .titulo-categoria svg{display:none}
+.dep-avatar{display:none!important}
+
+/* Menu de categorias em uma linha */
+.nivel-um>li>a{padding:0 8px!important}
+
+@media (max-width:767px){
+  .listagem-item .imagem-produto{height:220px!important}
+  .marcas .slick-slide a{height:125px!important;padding:1px}
+  .marcas .slick-slide img{max-height:110px!important}
+}
