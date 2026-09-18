@@ -54,8 +54,8 @@ body, input, select, .titulo, button, textarea, .pagina-pagina .caixa-sombreada 
 .video-produto{background:#fffdfa;border:1px solid rgba(218,165,32,.25);border-radius:14px;padding:18px 16px;box-shadow:0 4px 18px rgba(28,28,28,.06)}
 .video-produto-titulo span{font-family:'Lato',Arial,sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.85em;color:#9d7f52;display:block;text-align:center;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(218,165,32,.25)}
 .video-produto .listagem-item-wrap{background:#fff;border:1px solid rgba(218,165,32,.15);border-radius:12px;padding:14px;box-shadow:0 2px 10px rgba(28,28,28,.05)}
-.video-produto .imagem-produto{border-radius:8px;overflow:hidden;margin-bottom:10px;width:110px!important;height:110px!important;flex:0 0 110px!important}
-.video-produto .imagem-produto img{width:100%!important;height:100%!important;object-fit:contain!important}
+#corpo .vitrine-video .listagem .listagem-item .imagem-produto,.video-produto .listagem-item .imagem-produto,.video-produto .imagem-produto{border-radius:8px;overflow:hidden;margin-bottom:10px;width:120px!important;height:120px!important;flex:0 0 120px!important;min-width:120px!important}
+#corpo .vitrine-video .listagem .listagem-item .imagem-produto img,.video-produto .listagem-item .imagem-produto img,.video-produto .imagem-produto img{width:100%!important;height:100%!important;object-fit:contain!important}
 .video-produto .nome-produto{font-family:'Lato',Arial,sans-serif;font-weight:600;color:#1c1c1c;font-size:.95em;line-height:1.35}
 .video-produto .info-produto{min-height:0!important}
 .video-produto .precos-wrap{margin-top:12px!important}
