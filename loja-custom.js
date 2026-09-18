@@ -48,3 +48,51 @@ var avisoConfig='';var v=2;var logoDesktop=220;var logoMobile=38;var desejos=tru
   }
   window.addEventListener('load',function(){[500,1200,2000,3500].forEach(function(t){setTimeout(fixMarcas,t)})});
 })();
+
+// ===== Dados estruturados (Schema.org) para páginas de produto =====
+(function(){
+  function addProductSchema(){
+    if(!document.body.classList.contains('pagina-produto')) return;
+    if(document.querySelector('script[data-custom-schema]')) return;
+    var h1=document.querySelector('h1');
+    if(!h1) return;
+    var name=h1.textContent.trim();
+    var priceEl=document.querySelector('.preco-promocional[data-sell-price]');
+    var price=priceEl?priceEl.getAttribute('data-sell-price'):null;
+    if(!price) return;
+    var imgTag=document.querySelector('meta[property="og:image"]');
+    var image=imgTag?imgTag.getAttribute('content'):'';
+    var descTag=document.querySelector('meta[name="description"]')||document.querySelector('meta[property="og:description"]');
+    var description=descTag?descTag.getAttribute('content'):'';
+    var brandLink=document.querySelector('a[href*="/marca/"]');
+    var brand=brandLink?brandLink.textContent.trim():'Clube da Essência';
+    var canonical=document.querySelector('link[rel="canonical"]');
+    var url=canonical?canonical.getAttribute('href'):location.href;
+    var skuMatch=document.body.innerText.match(/C[oó]digo:\s*([A-Z0-9]+)/);
+    var sku=skuMatch?skuMatch[1]:'';
+    var data={
+      "@context":"https://schema.org/",
+      "@type":"Product",
+      "name":name,
+      "image":image?[image]:[],
+      "description":description,
+      "sku":sku,
+      "brand":{"@type":"Brand","name":brand},
+      "offers":{
+        "@type":"Offer",
+        "url":url,
+        "priceCurrency":"BRL",
+        "price":price,
+        "availability":"https://schema.org/InStock",
+        "itemCondition":"https://schema.org/NewCondition"
+      }
+    };
+    var script=document.createElement('script');
+    script.type='application/ld+json';
+    script.setAttribute('data-custom-schema','1');
+    script.textContent=JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',addProductSchema):addProductSchema();
+  setTimeout(addProductSchema,1000);
+})();
