@@ -12,3 +12,24 @@ var avisoConfig='';var v=2;var logoDesktop=220;var logoMobile=38;var desejos=tru
 
 // ===== Botão PIX 10% OFF / Comprar pelo WhatsApp =====
 (()=>{let w=(n,l,t)=>{let a=document.createElement('a');a.className='botao-pix';a.target='_blank';a.style.cssText='display:block!important;background:#159447!important;color:#fff!important;text-align:center;font-weight:900!important';a.href='https://wa.me/5544998684838?text='+encodeURIComponent('Olá! Quero '+n+' com 10% de desconto no PIX. '+l);a.innerHTML=t;return a};function p(){document.querySelectorAll('.pagina-produto .comprar .botao-comprar:not([data-px])').forEach(b=>{b.dataset.px=1;b.before(w(document.querySelector('h1')?.innerText||'este produto',location.href,'⚡ COMPRAR COM PIX<small>10% de desconto via WhatsApp</small>'))});document.querySelectorAll('.listagem-item').forEach(i=>{let n=i.querySelector('.nome-produto'),p=i.querySelector('.precos-wrap');if(n&&p&&!i.querySelector('.botao-pix')){p.after(w(n.innerText,n.href,'PIX 10% OFF<small>Comprar pelo WhatsApp</small>'))}});let r=document.querySelector('.tabela-carrinho .total')?.closest('tr');if(r&&!document.querySelector('.av-pix')){let q=document.createElement('tr');q.innerHTML='<td colspan=6></td>';let a=w('meu carrinho',location.href,'💸 10% OFF NO PIX<small>Exclusivo no WhatsApp • Clique para solicitar</small>');a.className+=' av-pix';q.firstChild.append(a);r.before(q)}}document.readyState==='loading'?document.addEventListener('DOMContentLoaded',p):p();setTimeout(p,1200)})();
+
+// ===== Corrige o texto truncado dos depoimentos, usando o nome como referência =====
+(function(){
+  var deps=[[dep1Nome,dep1Msg],[dep2Nome,dep2Msg],[dep3Nome,dep3Msg],[dep4Nome,dep4Msg],[dep5Nome,dep5Msg]];
+  function fixDep(){
+    document.querySelectorAll('.depoimento').forEach(function(el){
+      var nomeEl=el.querySelector('.dep-nome');
+      var msgEl=el.querySelector('.dep-msg p');
+      if(!nomeEl||!msgEl)return;
+      var nomeTxt=nomeEl.textContent.trim();
+      for(var i=0;i<deps.length;i++){
+        if(nomeTxt.indexOf(deps[i][0])===0){
+          msgEl.innerHTML='<i class="fa fa-quote-left"></i>'+deps[i][1]+'<i class="fa fa-quote-right"></i>';
+          break;
+        }
+      }
+    });
+  }
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fixDep):fixDep();
+  [300,800,1500,3000].forEach(function(t){setTimeout(fixDep,t)});
+})();
