@@ -43,7 +43,7 @@ body, input, select, .titulo, button, textarea, .pagina-pagina .caixa-sombreada 
 .depoimento{margin:0 4px!important}
 .vitrine-depoimentos .titulo-categoria svg{display:none}
 .dep-avatar{display:none!important}
-.depoimento .dep-msg,.depoimento .dep-msg span,.depoimento .dep-msg p{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important;text-overflow:clip!important;max-height:none!important;height:auto!important;min-height:0!important}
+.vitrine-depoimentos .depoimento .dep-msg,.vitrine-depoimentos .depoimento .dep-msg span,.vitrine-depoimentos .depoimento .dep-msg p,.depoimento .dep-msg,.depoimento .dep-msg span,.depoimento .dep-msg p{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important;text-overflow:clip!important;max-height:none!important;height:auto!important;min-height:0!important}
 .depoimento,.depoimento a{height:auto!important;min-height:0!important}
 .depoimento,.depoimento a{height:auto!important;min-height:0!important}
 
