@@ -33,3 +33,18 @@ var avisoConfig='';var v=2;var logoDesktop=220;var logoMobile=38;var desejos=tru
   document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fixDep):fixDep();
   [300,800,1500,3000].forEach(function(t){setTimeout(fixDep,t)});
 })();
+
+// ===== Mostrar 2 marcas por vez no carrossel mobile =====
+(function(){
+  function fixMarcas(){
+    if(window.innerWidth>767) return;
+    if(typeof jQuery==='undefined') return;
+    var el=jQuery('.marcas .slick-slider, .marcas.slick-slider');
+    if(!el.length||!el.hasClass('slick-initialized')) return;
+    try{
+      el.slick('slickSetOption','slidesToShow',2,true);
+      el.slick('slickSetOption','slidesToScroll',2,true);
+    }catch(e){}
+  }
+  window.addEventListener('load',function(){[500,1200,2000,3500].forEach(function(t){setTimeout(fixMarcas,t)})});
+})();
